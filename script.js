@@ -34,7 +34,8 @@ function searchCity() {
     const city = document.querySelector("input");
     let API_key = "c120caba2b318767737a2bb80155f786";
     const promise = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.value.toLowerCase()}&appid=${API_key}&units=metric`);
-
+    const weather = document.querySelector(".weather");
+    weather.innerHTML = "";
     getAPIData(promise)
 }
 
